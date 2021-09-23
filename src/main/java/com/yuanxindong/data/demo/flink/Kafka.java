@@ -24,6 +24,7 @@ public class Kafka {
         FlinkKafkaConsumer<String> consumer =
             new FlinkKafkaConsumer<String>(inputTopic, new SimpleStringSchema(), properties);
         DataStream<String> stream = env.addSource(consumer);
+        String a = "";
 
         //使用消费kafka 流式处理消息
 
